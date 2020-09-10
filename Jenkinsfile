@@ -1,10 +1,7 @@
-pipeline {
-  agent {
-    node {
+node {
       label 'my-defined-label'
       customWorkspace 'C:\\Users\\nvanteri\\Documents'
-    }
-	stage ('SCM checkout'){
+	 stage ('SCM checkout'){
 		git "https://github.com/n111391/pipes"
 		}
 		
@@ -23,7 +20,7 @@ pipeline {
 			bat "java -jar CucumberJava 0.0.1-SNAPSHOT.jar"
 		}
 	}
-}
+
 post {
         always {
             dir("CucumberJava"){
