@@ -2,7 +2,7 @@ pipeline {
   agent {
     node {
       label 'my-defined-label'
-      customWorkspace 'C:\Users\nvanteri\Documents'
+      customWorkspace 'C:\\Users\\nvanteri\\Documents'
     }
 	stage ('SCM checkout'){
 		git "https://github.com/n111391/pipes"
