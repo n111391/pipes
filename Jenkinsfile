@@ -1,13 +1,13 @@
   node {
 	stage ('SCM checkout'){
-		git "https://gitlab.com/mbabilo/experitest"
+		git "https://github.com/n111391/pipes"
 		}
 	stage ('Build'){
-    	dir("comtest") {
+    	dir("CucumberJava") {
 	   sh "mvn clean install"
        }
-       	dir("comtest/target") {
-	   sh "java -jar com.test-1.0-SNAPSHOT.jar"
+       	dir("CucumberJava/target") {
+	   sh "java -jar CucumberJava 0.0.1-SNAPSHOT.jar"
        }
 		}
 }
