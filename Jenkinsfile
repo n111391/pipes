@@ -1,10 +1,5 @@
-pipeline {
-  agent {
-    node {
-      label 'my-defined-label'
-      customWorkspace '/some/other/path'
-    }
-	stage ('SCM checkout'){
+node {
+ 	stage ('SCM checkout'){
 		git "https://github.com/n111391/pipes"
 		}
 		
@@ -30,5 +25,4 @@ post {
             }
         }
     }
-}
 }
