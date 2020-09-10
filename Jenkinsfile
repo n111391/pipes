@@ -4,10 +4,10 @@
 		}
 	stage ('Build'){
     	dir("CucumberJava") {
-	   sh "mvn clean install"
+	   bat "mvn clean install"
        }
        	dir("CucumberJava/target") {
-	   sh "java -jar CucumberJava 0.0.1-SNAPSHOT.jar"
+	   bat "java -jar CucumberJava 0.0.1-SNAPSHOT.jar"
        }
 		}
 }

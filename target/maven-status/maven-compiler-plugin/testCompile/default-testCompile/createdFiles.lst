@@ -1,6 +1,0 @@
-StepDefinitions\GoogleSearch.class
-pages\LoginPage.class
-TestRunners\TestRunner.class
-StepDefinitions\LoginSteps.class
-StepDefinitions\GoogleSearchCopy.class
-Factory\PF.class
