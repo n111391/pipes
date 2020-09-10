@@ -4,10 +4,8 @@ node {
 		}
 		
 	 stage('Clean') {
-            steps {
                 dir("CucumberJava"){
                     bat 'mvn clean'
-                }
             }
         }
 	stage ('Build'){
